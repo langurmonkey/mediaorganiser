@@ -1,41 +1,31 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
 #include <string>
 #include "add.hpp"
 
 using namespace std;
 
+#define N 10
+
 int main()
 {
-    cout << "The sum of 3 and 4 is: " << add(3, 4) << endl;
-    int32_t a{};
-    long b{};
-    long int c{};
-    cout << sizeof(a) << " " << sizeof(b) << " " << sizeof(c) << endl;
-
-    float d{};
-    double e{};
-    long double f{};
-    cout << sizeof(d) << " " << sizeof(e) << " " << sizeof(f) << endl;
-
-    if(a){
-        cout << "A is true";
-    }
-    a = 100;
-    if(a){
-        cout << "A is true after init to non-zero" << endl;
+    for(int i = 0; i < N; i++){
+        int a = pow(2, i);
+        cout << '\r'
+             << "pow(2, " << i << ") = "
+             << a
+             << flush;
+        this_thread::sleep_for(chrono::milliseconds(200));
     }
 
-    char ch(36);
-    cout << ch << endl;
-    ch += 4;
-    cout << ch << endl;
+    cout << endl;
 
-
-    string s("HI there");
-    cout << s << endl;
-
-    int bin = 0b0100'1001'0001;
-    cout << bin << endl;
+    int a = 1;
+    for(int i =0; i < N; i++){
+        cout << "a = " << a << endl;
+        a = a << 1;
+    }
     return 0;
 }
 
