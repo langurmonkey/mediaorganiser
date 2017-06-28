@@ -7,11 +7,17 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
 
-# Find the QtWidgets library
+# Find QtWidgets
 find_package(Qt5Widgets)
+# Find Boost
+find_package(Boost COMPONENTS program_options filesystem REQUIRED)
+include_directories(${Boost_INCLUDE_DIR})
 
-add_executable(mediaorganiserqt mainqt.cpp)
-add_executable(mediaorganiser main.cpp)
+# EXECUTABLES
+add_executable(mediaorganiser.o main.cpp mediaorganiser.cpp)
+add_executable(mediaorganiserqt.o mainqt.cpp mediaorganiser.cpp)
 
-# Use the Widgets module from Qt 5.
-target_link_libraries(mediaorganiserqt Qt5::Widgets)
+
+target_link_libraries(mediaorganiser.o LINK_PUBLIC ${Boost_LIBRARIES})
+target_link_libraries(mediaorganiserqt.o LINK_PUBLIC ${Boost_LIBRARIES})
+target_link_libraries(mediaorganiserqt.o Qt5::Widgets)
