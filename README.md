@@ -12,17 +12,17 @@ It recognises the following prefixes:
 It also recognises dates in the filename as `YYYY-MM-DD`. If the script can't work out the date, then it copies the file to an `./undated` folder.
 
 ### Usage
-``
+```
 mediaorganiser -i INPUT_FOLDER -o OUTPUT_FOLDER
-``
+```
 
 Here are all the arguments:
-``
+```
 General options:
 -h [ --help ]         print help
 -i [ --input ] arg    input folder
 -o [ --output ] arg   output folder
 -c [ --copy ]         if specified, files are copied instead of moved
-``
+```
 
 If the output folder is not given, the output is set to the input folder.
