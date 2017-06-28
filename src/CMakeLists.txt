@@ -19,5 +19,4 @@ add_executable(mediaorganiserqt.o mainqt.cpp mediaorganiser.cpp)
 
 
 target_link_libraries(mediaorganiser.o LINK_PUBLIC ${Boost_LIBRARIES})
-target_link_libraries(mediaorganiserqt.o LINK_PUBLIC ${Boost_LIBRARIES})
 target_link_libraries(mediaorganiserqt.o Qt5::Widgets)
