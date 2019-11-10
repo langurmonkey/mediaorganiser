@@ -25,12 +25,7 @@ You will need the `boost` library to build the project.
 $  cd mediaorganiser/src
 $  cmake . && make
 ```
-
-Install with:
-
-```bash
-$  make install
-```
+Your executable is in `meidaorganiser/src/mediaorganiser`.
 
 ### Usage
 
