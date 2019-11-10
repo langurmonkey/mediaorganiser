@@ -11,9 +11,24 @@ It recognises the following prefixes:
 
 It also recognises dates in the filename as `YYYY-MM-DD`. If the script can't work out the date, then it copies the file to an `./undated` folder.
 
-### Usage
+### Build
+
+You will need the `boost` library.
+
+```bash
+$  cmake . && make
 ```
-mediaorganiser -i INPUT_FOLDER -o OUTPUT_FOLDER
+
+Install with:
+
+```bash
+$  make install
+```
+
+### Usage
+
+```bash
+$  mediaorganiser -i INPUT_FOLDER -o OUTPUT_FOLDER
 ```
 
 Here are all the arguments:
