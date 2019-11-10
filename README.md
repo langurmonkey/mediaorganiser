@@ -13,9 +13,16 @@ It also recognises dates in the filename as `YYYY-MM-DD`. If the script can't wo
 
 ### Build
 
-You will need the `boost` library.
+Clone the repo.
 
 ```bash
+$  git clone https://gitlab.com/langurmonkey/mediaorganiser.git
+```
+
+You will need the `boost` library to build the project.
+
+```bash
+$  cd mediaorganiser/src
 $  cmake . && make
 ```
 
@@ -32,6 +39,7 @@ $  mediaorganiser -i INPUT_FOLDER -o OUTPUT_FOLDER
 ```
 
 Here are all the arguments:
+
 ```
 General options:
 -h [ --help ]         print help
