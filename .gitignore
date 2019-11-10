@@ -7,3 +7,4 @@ CMakeCache.txt
 Makefile
 *_automoc.cpp
 .qmake.stash
+**/*_autogen/
